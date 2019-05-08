@@ -1,0 +1,114 @@
+静的な型（static type）と、動的な型（dynamic type）
+静的な型とは、実行しなくても、その意味が分かる型のことである。
+動的な型は、実行しなければ、その意味が決定出来ない型のことである。
+
+::xとはグローバル空間に存在する変数ｘのことである
+
+メタ関数
+->コンパイル時に決まる
+
+関数テンプレート　
+->どんな型でも受け取れる関7数<class T>x <class T>は型を表す
+-><typename T>でも可能
+
+メタ関数を関数テンプレートとして定義可能
+template <class T>
+T* add_pointer();
+#
+#
+typedef decltype(add_pointer<int>()) result;
+
+template <class T>
+T* add_pointer(T);
+#
+#
+typedef decltype(add_pointer(std::decltype<int>()) result;
+
+テンプレート仮引数リストのテンプレート仮引数名は省略できる
+	template < typename >
+	struct X { } ;
+
+テンプレートを宣言できるのは、名前空間スコープかクラススコープの中だけである
+
+テンプレート実引数は、テンプレート名に続いて、< >で実引数を囲んで渡す
+
+非型テンプレート
+	// enum型の例
+	enum struct E : int { value = 0 } ;
+
+	template < E value >
+	struct B { } ;
+	B<E::value> b;
+	// オブジェクトへのポインター
+	template < int * P >
+	struct A { } ;
+
+	// 関数へのポインター
+	using func_ptr_type = void (*)() ;
+
+	template < func_ptr_type FUN >
+	struct B { } ;
+
+	void f() { }
+	static int global = 0 ;
+
+	int main( )
+	{
+    	// 非型テンプレート実引数
+    	A< &global > a ;
+    	B< &f > b ;
+	}
+
+テンプレートテンプレート
+// OK
+template < template < typename > class T >
+struct X { } ;
+
+// エラー
+template < template < typename > typename T >
+struct Y { } ;
+
+boolに変換可能な型を返す関数はpredicateと呼ぶ
+
+
+decltype 変数の型を返す
+
+
+decltypeとautoの違い
+
+
+タグディスパッチの目的　型に応じて適切な関数を呼び分ける
+
+template <int N>静的な値　整数を入れられる
+
+93 constexptr とメタ関数　
+	constexprは通常の関数の形でメタ関数を書ける 少数点も扱える　return 文とかも
+	メタ関数は型を処理できる　メタ関数はstruct class に書かれる
+
+値はvalue 型はtype
+
+型を変数として返すstd::declval<int>()ただしdecltypeないのみ
+
+定数値を直接受け取るメタ関数をセットする場合に定数値を受け取るメタ関数には
+constantを意味する_cをつける傾向がある
+
+p104 関数と同様にメタ関数を書くには 
+	decltype 宣言だけ 引数をもたせる
+	T* add_pointer(T);
+	typedef decltype(add_pointer(std::declval<int>())
+
+
+SFINAE 型によってオーバーロードする関数を選択する
+
+atatic_assert(false,""); falseの時コンパイルエラー
+std::true_type はstatic constexpr bool value = true;
+
+
+
+constexpr コンパイル時定数　コンパイル時に決まる　記憶領域をもたない
+const リードオンリーな変数　初期化時に値が決まる　constexprとなる時がある
+
+decltype型修飾子は関数の呼び出しは行わない
+関数の型を渡すと関数の戻り値の型が返される
+
+

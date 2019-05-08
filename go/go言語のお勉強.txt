@@ -1,0 +1,26 @@
+P69 ServeHTTP 
+P78 DefaultServeMux serveMux の違い　net/httpライブラリをインポートしたアプリケーションが一般的に利用できるServeMuxのインスタンス？　構造体Server内にハンドラが指定されていない場合にも使われるServeMuxのインスタンス
+
+
+ハンドラnil DefaultServerMux ハンドラが見つけられず404->http.Handleを使ってハンドルをDefaultServeMuxにふかして使う
+http.Handleを呼び出す = DefaultServeMuxのメソッドHandleを呼び出す
+
+handler serverHTTPというメソッドをもったインタフェース
+このメソッドはHTTPResponseWriterとRequestへのポインタ
+ListenAndServe　第二引数　DefaultServeMux
+
+
+DefaultServeMux マルチプレクサ これもハンドラ (特殊なタイプの)　与えられたＵＲＬに応じてリクエストを各種ハンドラに転送する デフォルトのマルチプレクサの代わりになるからデフォルトマルチプレクサではない
+
+veriSign
+
+ハンドラ関数　ハンドラのようにふるまう関数　ServeHTTPと同じシグネチャを持つ
+HandlerFunc　適切なシグニチャを持った関数fからメソッドfを持つハンドラに変換してくれます つまりハンドラに変換してそのハンドラをDefaultServceMuxに変換する
+
+末尾に/があるURLとないURLの違い
+
+属性enctype URLエンコード MINE形式
+
+ResponseWriter　サーバからクライアントにレスポンスを送信する場合に利用するインタフェース
+
+P110 変数jsonが構造体Postの内容から組み立てられたJSON文字列？　
