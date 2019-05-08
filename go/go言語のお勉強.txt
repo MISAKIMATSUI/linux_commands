@@ -23,4 +23,18 @@ HandlerFunc@“KØ‚ÈƒVƒOƒjƒ`ƒƒ‚ğ‚Á‚½ŠÖ”f‚©‚çƒƒ\ƒbƒhf‚ğ‚Âƒnƒ“ƒhƒ‰‚É•ÏŠ·‚µ‚Ä‚
 
 ResponseWriter@ƒT[ƒo‚©‚çƒNƒ‰ƒCƒAƒ“ƒg‚ÉƒŒƒXƒ|ƒ“ƒX‚ğ‘—M‚·‚éê‡‚É—˜—p‚·‚éƒCƒ“ƒ^ƒtƒF[ƒX
 
-P110 •Ï”json‚ª\‘¢‘ÌPost‚Ì“à—e‚©‚ç‘g‚İ—§‚Ä‚ç‚ê‚½JSON•¶š—ñH@
+P110 •Ï”json‚ª\‘¢‘ÌPost‚Ì“à—e‚©‚ç‘g‚İ—§‚Ä‚ç‚ê‚½JSON•¶š—ñH
+
+ƒpƒbƒP[ƒW‚ÌƒCƒ“ƒ|[ƒg‚Í‚»‚ÌƒpƒbƒP[ƒW‚ğ—˜—p‚·‚é.goƒtƒ@ƒCƒ‹‚²‚Æ‚És‚¤
+
+•W€ƒ‰ƒCƒuƒ‰ƒŠ‚ÆƒT[ƒhƒp[ƒeƒB»‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚ÌƒCƒ“ƒ|[ƒgƒpƒX‚ÌŠÔ‚Í‚Ps‹ó”’‚ğ“ü‚ê‚Ä‹Lq‚·‚é
+
+go vet golint‚ğg—p‚µ‚ÄƒRƒ“ƒpƒCƒ‰‚ª“f‚©‚È‚¢ƒGƒ‰[‚Ìƒ`ƒFƒbƒN
+
+effective go https://golang.org/doc/effective_go.html
+
+\‘¢‘Ì‚ÌƒAƒ‰ƒCƒ“ƒƒ“ƒgƒ`ƒFƒbƒN maligned http://golang-sizeof.tips
+
+Šµ—p“I‚ÈÀ‘•ƒpƒ^[ƒ“@http://tmrts.com/go-patterns/
+
+struct‚ğƒCƒ“ƒ^[ƒtƒF[ƒX‚É‘©”›‚³‚¹‚é‚±‚Æ‚Åƒrƒ‹ƒh‚É˜R‚ê‚É‹C‚Ã‚­‚±‚Æ‚ª‚Å‚«‚é@
