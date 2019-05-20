@@ -1,0 +1,28 @@
+go getについて
+->go getでインストールするときの難点 goが必要 安定版ではなく開発版 バイナリにビルド情報が含まれない
+
+
+go vet golintを使用してコンパイラが吐かないエラーのチェック
+
+effective go https://golang.org/doc/effective_go.html
+
+構造体のアラインメントチェック maligned http://golang-sizeof.tips
+
+慣用的な実装パターン　http://tmrts.com/go-patterns/
+
+REPL gore -autoimport 
+
+goreを便利にする
+github.com/nsf/gocode
+github.com/k0ku8bun/pp
+github.com/golang.org/x/tools/cmd/godoc
+
+goPATH管理
+ghq
+
+gorename 変数名や関数の名前をリネーム
+guru ソースコードを静的に解析するツール
+gocode コード補完用ほエンジン
+godef 定義ジャンプのためにツール
+gotags ctags互換のタグ生成してくれるツール
+glide /venderディレクトリの管理
