@@ -8,7 +8,7 @@ main(int argc, char **argv)
 {
 	int n = argc > 1 ? atoi(argv[1]) : 1000000000;
 	int a = argc > 2 ? atoi(argv[2]) : 0;
-	int b = argc > 3 ? atoi(argv[3]) : 0;
+	const int b = argc > 3 ? atoi(argv[3]) : 0;
 
 	switch (argc > 4 ? atoi(argv[4]) : 0) {
 		x(0);   x(1);   x(2);   x(3);   x(4);
