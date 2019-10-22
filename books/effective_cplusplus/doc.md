@@ -9,6 +9,9 @@ P3
 P4 
 	定数 const ヘッダ
 --- 
+P4 
+	`const char* const name = "test"` < `const std::string name("test")`
+--- 
 P5 
 	クラス 定数 static
 --- 
